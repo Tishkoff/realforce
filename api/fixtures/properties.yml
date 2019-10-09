@@ -1,0 +1,59 @@
+App\Entity\Property:
+    property_age:
+        name: age
+        
+    property_country_tax:
+        name: country_tax
+        
+    property_kids:
+        name: kids
+        
+    property_uses_car:
+        name: uses_car
+        
+    property_works_remote:
+        name: works_remote
+        
+    property_travels:
+        name: travels
+        
+App\Entity\PropertyCondition:
+    property_condition_{@property_age}:
+        property: <current()>
+        debitCredit: 1
+        flatPercent: 1
+        condition: '>='
+        value: 50
+        amount: 7
+    
+    property_condition_{@property_country_tax}:
+        property: <current()>
+        debitCredit: 0
+        flatPercent: 1
+        condition: '=='
+        value: 1
+        amount: 20
+    
+    property_condition_{@property_kids}:
+        property: <current()>
+        debitCredit: 1
+        flatPercent: 1
+        condition: '>'
+        value: 2
+        amount: 1
+    
+    property_condition_{@property_uses_car}:
+        property: <current()>
+        debitCredit: 0
+        flatPercent: 0
+        condition: '=='
+        value: 1
+        amount: 500
+    
+    property_condition_test:
+        property: '@property_travels'
+        debitCredit: 0
+        flatPercent: 0
+        condition: '=='
+        value: 1
+        amount: 1234

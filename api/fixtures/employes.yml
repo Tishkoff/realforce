@@ -1,0 +1,78 @@
+App\Entity\Employee:
+    employee_alice:
+        name: Alice
+        salary: 6000
+        
+    employee_bob:
+        name: Bob
+        salary: 4000
+        
+    employee_charlie:
+        name: Charlie
+        salary: 5000
+        
+    employee_last:
+        name: Last Employee
+        salary: 0
+        
+        
+App\Entity\PropertyValue:
+    property_value_{@employee_alice}_{@property_age}:
+        employee: '@employee_alice'
+        property: '@property_age'
+        value: 26
+    
+    property_value_{@employee_bob}_{@property_age}:
+        employee: '@employee_bob'
+        property: '@property_age'
+        value: 52
+    
+    property_value_{@employee_charlie}_{@property_age}:
+        employee: '@employee_charlie'
+        property: '@property_age'
+        value: 36
+        
+    property_value_{@employee_alice}_{@property_country_tax}:
+        employee: '@employee_alice'
+        property: '@property_country_tax'
+        value: 1
+    
+    property_value_{@employee_bob}_{@property_country_tax}:
+        employee: '@employee_bob'
+        property: '@property_country_tax'
+        value: 1
+    
+    property_value_{@employee_charlie}_{@property_country_tax}:
+        employee: '@employee_charlie'
+        property: '@property_country_tax'
+        value: 1
+        
+    property_value_{@employee_alice}_{@property_kids}:
+        employee: '@employee_alice'
+        property: '@property_kids'
+        value: 2
+    
+    property_value_{@employee_bob}_{@property_kids}:
+        employee: '@employee_bob'
+        property: '@property_kids'
+        value: 0
+    
+    property_value_{@employee_charlie}_{@property_kids}:
+        employee: '@employee_charlie'
+        property: '@property_kids'
+        value: 3
+        
+    property_value_{@employee_alice}_{@property_uses_car}:
+        employee: '@employee_alice'
+        property: '@property_uses_car'
+        value: 0
+    
+    property_value_{@employee_bob}_{@property_uses_car}:
+        employee: '@employee_bob'
+        property: '@property_uses_car'
+        value: 1
+    
+    property_value_{@employee_charlie}_{@property_uses_car}:
+        employee: '@employee_charlie'
+        property: '@property_uses_car'
+        value: 1
